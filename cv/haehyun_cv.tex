@@ -1,0 +1,528 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage{calc}
+\usepackage{comment}
+\usepackage[shortlabels]{enumitem}
+\usepackage{fontawesome}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{linegoal}
+
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+	linkcolor=black,urlcolor=black,
+	anchorcolor=black,citecolor=black}
+
+% Simpler bibsection for CV sections
+% (thanks to natbib for inspiration)
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em} %1em}
+\newlength{\bibsep}
+{\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newenvironment{bibsection}%
+{\begin{enumerate}{}{%
+			%        {\begin{list}{}{%
+			\setlength{\leftmargin}{\bibhang}%
+			\setlength{\itemindent}{-\leftmargin}%
+			\setlength{\itemsep}{\bibsep}%
+			\setlength{\parsep}{\z@}%
+			\setlength{\partopsep}{0pt}%
+			\setlength{\topsep}{0pt}}}
+	{\end{enumerate}\vspace{-.6\baselineskip}}
+%        {\end{list}\vspace{-.6\baselineskip}}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title (name) with a horizontal rule under it
+% (optional argument typesets an object right-justified across from name
+%  as well)
+%
+% Usage: \makeheading{name}
+%        OR
+%        \makeheading[right_object]{name}
+%
+% Place at top of document. It should be the first thing.
+% If ``right_object'' is provided in the square-braced optional
+% argument, it will be right justified on the same line as ``name'' at
+% the top of the CV. For example:
+%
+%       \makeheading[\emph{Curriculum vitae}]{Your Name}
+%
+% will put an emphasized ``Curriculum vitae'' at the top of the document
+% as a title. Likewise, a picture could be included:
+%
+%   \makeheading[\includegraphics[height=1.5in]{my_picutre}]{Your Name}
+%
+% the picture will be flush right across from the name.
+\newcommand{\makeheading}[2][]%
+{\hspace*{-\marginparsep minus \marginparwidth}%
+	\begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+		{\large \bfseries #2 \hfill #1}\\[-0.15\baselineskip]%
+		\rule{\columnwidth}{1pt}%
+\end{minipage}}
+
+% The section headings
+%
+% Usage: \section{section name}
+\renewcommand{\section}[1]{\pagebreak[3]%
+	\hyphenpenalty=10000%
+	\vspace{1.3\baselineskip}%
+	\phantomsection\addcontentsline{toc}{section}{#1}%
+	\noindent\llap{\scshape\smash{\parbox[t]{\marginparwidth}{\raggedright #1}}}%
+	\vspace{-\baselineskip}\par}
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+{\begin{itemize}[#1,leftmargin=*]}{\end{itemize}%
+	\vspace{-.6\baselineskip}}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+{\begin{list}{#1}{%
+			\setlength{\partopsep}{0pt}%
+			\setlength{\topsep}{0pt}}}
+	{\end{list}\vspace{-.6\baselineskip}}
+
+% An itemize-style list with little space between items
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+{\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt]}
+	{\end{itemize}}
+
+% An environment IDENTICAL to innerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{loneinnerlist}[1][\enskip\textbullet]%
+{\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt]}
+	{\end{itemize}\vspace{-.6\baselineskip}}
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[3]}
+\newcommand{\halfblankline}{\quad\vspace{-0.5\baselineskip}\pagebreak[3]}
+
+% Uses hyperref to link DOI
+\newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
+\newcommand\doi[1]{doi:\doilink{#1}}
+
+% For \url{SOME_URL}, links SOME_URL to the url SOME_URL
+\providecommand*\url[1]{\href{#1}{#1}}
+% Same as above, but pretty-prints SOME_URL in teletype fixed-width font
+\renewcommand*\url[1]{\href{#1}{\texttt{#1}}}
+
+% For \email{ADDRESS}, links ADDRESS to the url mailto:ADDRESS
+\providecommand*\email[1]{\href{mailto:#1}{#1}}
+% Same as above, but pretty-prints ADDRESS in teletype fixed-width font
+%\renewcommand*\email[1]{\href{mailto:#1}{\texttt{#1}}}
+
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    \TeX}}
+\providecommand\BibTeX{{B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+		\TeX}}
+\providecommand\Matlab{\textsc{Matlab}}
+
+\begin{document}
+%----------------------------------------------------------------------------------------
+%	CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+\begin{table}[t]
+	%\centering
+\begin{tabular}{ll}
+	\multirow{3}{*}{ \Huge\textbf{Haehyun Cho} } 
+	& \hspace{1.7cm}\faEnvelopeSquare~\email{haehyun@asu.edu},~\email{haehyuncho@gmail.com}\\
+	& \hspace{1.7cm}\faExternalLink~\href{https://haehyun.github.io}{https://haehyun.github.io} \\
+	& \hspace{1.7cm}\faGithub~\href{https://github.com/haehyun}{https://github.com/haehyun}\\
+\end{tabular}
+\end{table}
+
+\vspace{-10mm}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{\faGenderless~Education}
+
+	\begin{rSubsection2}
+		{Ph.D., Computer Science}{Aug 2016 - Present}
+		{Arizona State University, Tempe, AZ}{}
+		% {\emph{Expected:} Summer 2021}
+		% \item Advisor: \href{http://www.public.asu.edu/~gahn1/}{Gail-Joon D. Ahn, Ph.D, CISSP}
+	\end{rSubsection2}
+	\vspace{-3mm}
+	\begin{rSubsection}
+		{M.S., Computer Science and Engineering}{Feb 2015}
+		{Soongsil University, Seoul, Korea}{}
+		\item Thesis: \emph{Mobile App Tamper Detection Scheme Based on Core Code Attestation}
+		% \item Advisor: {Jeong Hyun Yi, Ph.D}
+		% \item GPA: 4.29/4.50
+		
+	\end{rSubsection}
+	\vspace{-3mm}
+	\begin{rSubsection2}
+		{B.S., Computer Science and Engineering}{Feb 2013}
+		{Soongsil University, Seoul, Korea}{}
+		% \item Academic Excellence Scholarship (Half Tuition/2 times)
+		% \item GPA: 3.89/4.50
+	\end{rSubsection2}
+
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{\faGenderless~Publications}
+
+	\strut\textbullet~{\bf Conference Papers with Proceedings}
+	\begin{bibsection}
+		\item Penghui Zhang, {\bf Haehyun Cho}, Ziming Zhao, Adam Doup\'e, and Gail-Joon Ahn,
+		``iCORE: Continuous and Proactive Extrospection on Multi-core IoT Devices,'' 
+        \emph{in Proceedings of the 34th ACM/SIGAPP Symposium On Applied Computing (SAC)}, 
+		Limassol, Cyprus, Apr 2019. (24\% acceptance rate.)
+     
+        \item {\bf Haehyun Cho}, Penghui Zhang, Donguk Kim, Jinbum Park, Choong-Hoon Lee, Ziming Zhao, Adam Doup\'e, and Gail-Joon Ahn,
+		``Prime+Count: Novel Cross-world Covert Channels on ARM TrustZone,'' 
+        \emph{in Proceedings of the 34th Annual Computer Security Applications Conference (ACSAC)}, 
+		San Juan, Puerto Rico, USA, Dec 2018. (20\% acceptance rate.)
+
+		\item Jaejong Baek, Sukwha Kyung, {\bf Haehyun Cho}, Ziming Zhao, Yan Shoshitaishvili, Adam Doup\'e, and Gail-Joon Ahn,
+		``Wi Not Calling: Practical Privacy and Availability Attacks in Wi-Fi Calling,'' 
+		\emph{in Proceedings of the 34th Annual Computer Security Applications Conference (ACSAC)}, 
+		San Juan, Puerto Rico, USA, Dec 2018. (20\% acceptance rate.)
+
+		\item Bernard Ngabonziza, Daniel Martin, Anna Bailey, {\bf Haehyun Cho}, and Sarah Martin.
+		``Trustzone explained: Architectural features and use cases.''
+        \emph{in Proceedings of the IEEE 2nd International Conference on Collaboration and Internet Computing (CIC)}, 
+        Pittsburgh, PA, Nov 2016. 
+        % <!-- pp.445-451, -->
+
+		% \item Jiwoong Bang, {\bf Haehyun Cho}, Myeongju Ji, Taejoo Cho, and Jeong Hyun Yi, 
+		% ``Tamper Detection Scheme Using Signature Segregation on Android Platform,'' 
+		% \emph{in Proceedings of the International Conference on Consumer Electronics-Berlin}, Sep 2015.
+	\end{bibsection}
+
+	\vspace{3mm}
+	\strut\textbullet~{\bf Journal Papers}
+	\begin{bibsection}
+		\item {\bf Haehyun Cho}, Jeong Hyun Yi, and Gail-Joon Ahn.
+        ``DexMonitor: Dynamically Analyzing and Monitoring Obfuscated Android Applications,'' 
+        \emph{IEEE Access},
+        Volume 6, pp.71229--71240
+        Nov 2018. (IF: 3.557)
+
+		\item {\bf Haehyun Cho}, Jiwoong Bang, Myeongju Ji, and Jeong Hyun Yi, 
+		``Mobile application tamper detection scheme using dynamic code injection against repackaging attacks,'' 
+		\emph{The Journal of Supercomputing}, 
+		Vol.72, No.9, pp.3629--3645, Sep 2016. (IF: 1.532)
+
+		\item Yiming Jing, Gail-Joon Ahn, Hongxin Hu, {\bf Haehyun Cho}, and Ziming Zhao,
+		``TRIPLEMON: A Multi-layer Security Framework for Mediating Inter-Process Communication on Android,'' 
+		\emph{Journal of Computer Security}, 
+		Vol.24, No.4, pp.405--426, Sep 2016.
+
+		\item {\bf Haehyun Cho}, Jiwoong Bang, Myeongju Ji, and Jeong Hyun Yi, 
+		``Anti-debugging scheme for protecting mobile apps on android platform,'' 
+		\emph{The Journal of Supercomputing}, 
+		Vol.72, No.1, pp.232--246, Jan 2016. (IF: 1.532)
+
+		\item Jongwon Choi, {\bf Haehyun Cho}, and Jeong Hyun Yi, 
+		``Personal Information Leaks with Automatic Login in Mobile Social Network Services,'' 
+		\emph{Entropy Journal}, 
+		Vol.17, No.6, pp.3947--3962, Jun 2015. (IF: 1.743)
+	\end{bibsection}
+	
+	\vspace{5mm}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PATENTS SECTION
+%----------------------------------------------------------------------------------------
+% \newpage
+\begin{rSection}{\faGenderless~Patents}
+	
+	\begin{bibsection}
+		\item Jeong Hyun Yi, {\bf Haehyun Cho}, Jiwoong Bang, and Myeongju Ji,
+		``Application Code Analysis Apparatus and Method for Code Analysis Using the Same,'' KR Patent, 
+		Patent No.: 10--1557455, Sep 2015.
+
+		\item Jeong Hyun Yi and {\bf Haehyun Cho}, 
+		``User Terminal to Detect the Tampering of the Applications Using Core Code and Method for Tamper Detection Using The Same,'' KR Patent, 
+		Patent No.: 10--1518689, Apr 2015.
+	\end{bibsection}
+	
+	\vspace{5mm}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EMPLOYMENT HISTORY SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{\faGenderless~Experience Summary}
+
+	\begin{rSubsection2}
+		{SEFCOM - {\small Security Engineering for Future Computing}}{Arizona State University, Tempe, AZ}
+		{--- Graduate Research Associate}{Mar 2016 - Present}
+	\end{rSubsection2}
+	\vspace{-3mm}
+	\begin{rSubsection2}
+		{Cyber Security Research Center}{Soongsil University, Seoul, Korea}
+		{--- Research Associate}{Mar 2015 - Feb 2016}
+	\end{rSubsection2}
+	\vspace{-3mm}
+	\begin{rSubsection2}
+		{Cyber Security Research Center}{Soongsil University, Seoul, Korea}
+		{--- Graduate Research Associate}{Mar 2013 - Feb 2015}
+	\end{rSubsection2}
+	\vspace{-3mm}
+%------------------------------------------------
+
+	\begin{rSubsection2}
+		{Republic of Korea Army}{Feb 2007 - Feb 2009}
+		{}{}
+	\end{rSubsection2}
+
+\end{rSection}
+
+% ----------------------------------------------------------------------------------------
+% 	PROJECT EXPERIENCE SECTION
+% ----------------------------------------------------------------------------------------
+
+\begin{rSection}{\faGenderless~Research/Project Experience}
+	
+	\begin{rSubsection3}
+		{ASU---Samsung Research Membership Projects}
+		{Source: Samsung Research}{Jan 2017 - Present}
+	\end{rSubsection3}
+	\vspace{-3mm}
+	%------------------------------------------------
+	% \begin{rSubsection3}
+	% 	{Preventing Cache-side channel attacks on the ARM architecture}
+	% 	{Source: Samsung Research}{Sep 2017 - Aug 2018}
+	% \end{rSubsection3}
+	% \vspace{-3mm}
+	%------------------------------------------------
+	% \begin{rSubsection3}
+	% 	{Building Data Covert Channels in TrustZone}
+	% 	%{Source: Samsung Electronics, Software R\&D Center}{January 2017 - June 2017}
+	% 	{Source: Samsung Research}{Jan 2017 - Aug 2017}
+	% \end{rSubsection3}
+	% \vspace{-3mm}
+	%------------------------------------------------
+	\begin{rSubsection3}
+		{Development of Security Technology for Mobile System Software}
+		{Source: National Research Foundation of Korea}{Aug 2014 - Feb 2017}
+	\end{rSubsection3}
+	\vspace{-3mm}
+	%------------------------------------------------
+	%\begin{rSubsection3}
+	%	{Development of Security Technology for Mobile System Software}
+	%	{Source: National Research Foundation of Koreas}{August 2014 - February 2016}
+	%\end{rSubsection3}
+	%------------------------------------------------
+	\begin{rSubsection3}
+		{Vulnerability Analyses and Countermeasures of Mobile Obfuscation}
+		{Source: Samsung Electronics}{Nov 2013 - Sep 2014}
+	\end{rSubsection3}
+	\vspace{-3mm}
+	%------------------------------------------------
+	%\begin{rSubsection3}
+	%	{Intuitive, Convenient, and Secure HCI-based Usable Security Technologies for Mobile Authentication and Security Enhancement in Mobile Computing Environments}
+	%	{Source: Ministry of Science, ICT, and Future Planning of Korea}{March 2013 - February 2015}
+	%\end{rSubsection3}
+	%------------------------------------------------
+	%\begin{rSubsection3}
+	%	{Self-Protection Scheme for Android Bytecodes}
+	%	{Source: National Security Research Institute of Korea}{July 2014 - January 2015}
+	%\end{rSubsection3}	
+	%------------------------------------------------
+	\begin{rSubsection3}
+		{Credential Management for Smart Device Apps}
+		{Source: Supreme Prosecutors' Office of Korea}{Aug 2013 - Jan 2014}
+	\end{rSubsection3}
+	%------------------------------------------------
+\end{rSection}
+
+% ----------------------------------------------------------------------------------------
+% 	HONORS AND AWARDS SECTION
+% ----------------------------------------------------------------------------------------
+
+\begin{rSection}{\faGenderless~Honors and Awards}
+
+	\strut\textbullet~{\bf Scholarship for Human Resources Development}\\
+	\strut\hspace{1cm}by Soongsil University, Seoul, Korea, Oct 2018.
+
+	\strut\textbullet~{\bf Distinguished Poster Award}\\
+	\strut\hspace{1cm}\parbox[t]{\linegoal}{\emph{``SeCore: Continuous Extrospection with High Visibility on Multi-core ARM Platforms,''} by the Organizing Committee of the 8th ACM Conference on Data and Application Security and Privacy (CODASPY `18).}
+	% Mar 2018.}
+
+	\strut\textbullet~{\bf Academic Excellence Scholarship}\\
+	\strut\hspace{1cm}by Soongsil University, Seoul, Korea.
+	% , $\sim$~2013 (2 times).
+
+	\strut\textbullet~{\bf Travel Grant}\\
+	\strut\hspace{1cm}by the 25th ACM Conference on Computer and Communications Security (CCS `18).
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	Invited Talks SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{\faGenderless~Invited Talks}
+
+	\strut\textbullet~{\bf ``Introduction and Security Concerns of Cache on ARM architecture''}\\
+	\strut\hspace{1cm}$\cdot$~Samsung Research, Seoul, Korea, Jun 2018.\\
+	\strut\hspace{1cm}$\cdot$~Soongsil University, Seoul, Korea, May 2018.
+
+\end{rSection}
+\vspace{3mm}
+
+%----------------------------------------------------------------------------------------
+%	Teaching Experience SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{\faGenderless~Teaching Experience}
+
+	% \begin{rSubsection}
+		% {Teaching Assistant}{}
+		% {}}{}
+	\textbullet~{\bf Teaching Assistant} \\
+		\strut\hspace{1cm}$\cdot$~System Security Principles, Samsung Electronics, Jan 2015.\\
+		\strut\hspace{1cm}$\cdot$~Android Security, LG Electronics, Jul 2014.\\
+		\strut\hspace{1cm}$\cdot$~System Security Principles, Samsung Electronics, Jan 2014.\\
+		\strut\hspace{1cm}$\cdot$~Network Security and Practice, Samsung Electronics, Aug 2013.
+	% \end{rSubsection}
+\end{rSection}	
+\vspace{3mm}
+
+%----------------------------------------------------------------------------------------
+%	SERVICE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{\faGenderless~Service}
+
+	\textbullet~{\bf External Reviewer} \\
+		\strut\hspace{1cm}$\cdot$~2018 ACM Conference on Computer and Communications Security (CCS)\\
+		\strut\hspace{1cm}$\cdot$~2018 European Symposium on Research in Computer Security (ESORICS)\\
+		\strut\hspace{1cm}$\cdot$~2017 ACM Conference on Computer and Communications Security (CCS)\\
+		\strut\hspace{1cm}$\cdot$~2017 ACM Asia Conference on Computer and Communications Security (AsiaCCS) \\
+		\strut\hspace{1cm}$\cdot$~2017 ACM Conference on Data and Application Security and Privacy (CODASPY)
+
+\end{rSection}
+\vspace{3mm}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{\faGenderless~Technical Strengths}
+
+\begin{tabular}{ @{} >{}l @{\hspace{6ex}} l }
+\textbullet~{\bf Skills \& Tools} & System Programming, Program Analysis, LLVM \\
+\textbullet~{\bf Computer Languages} & C, C++, Python, Java, Assemblies \\
+\textbullet~{\bf Operating Systems} & Linux, OP-TEE OS, Android, Tizen, Windows \\
+\textbullet~{\bf Computer Architectures} & ARM, Intel
+\end{tabular}
+
+\end{rSection}
+
+% \vspace{1cm}
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES SECTION
+%----------------------------------------------------------------------------------------
+\newpage
+\begin{rSection}{\faGenderless~References}
+	
+	\textbf{Gail-Joon~D.~Ahn} \hfill{E-mail: gahn@asu.edu}
+	\begin{innerlist}
+		\item[] 
+		Professor of Computer Science \\
+		Fulton Entrepreneurial Professor \\
+		Director, Center for Cybersecurity and Digital Forensics \\
+		Director, Laboratory of Security Engineering for Future Computing (SEFCOM) \\
+		School of Computing, Informatics and Decision Systems Engineering \\
+		Ira A. Fulton Schools of Engineering \\
+		Arizona State University
+	\end{innerlist}
+	
+	\halfblankline
+	
+	\textbf{Adam~Doup\'e} \hfill{E-mail: doupe@asu.edu}
+	\begin{innerlist}
+		\item[] 
+		Assistant Professor of Computer Science \\
+		Associate Director, Center for Cybersecurity and Digital Forensics \\
+		co-Director, Laboratory of Security Engineering for Future Computing (SEFCOM) \\
+		School of Computing, Informatics and Decision Systems Engineering \\
+		Ira A. Fulton Schools of Engineering \\
+		Arizona State University
+	\end{innerlist}
+
+	\halfblankline
+	
+	\textbf{Yan~Shoshitaishvili} \hfill{E-mail: yans@asu.edu}
+	\begin{innerlist}
+		\item[] 
+		Assistant Professor of Computer Science \\
+		co-Director, Laboratory of Security Engineering for Future Computing (SEFCOM) \\
+		School of Computing, Informatics and Decision Systems Engineering \\
+		Ira A. Fulton Schools of Engineering \\
+		Arizona State University
+	\end{innerlist}
+
+	\halfblankline
+	
+	\textbf{Ziming~Zhao} \hfill{E-mail: zhao@mail.rit.edu}
+	\begin{innerlist}
+		\item[] 
+		Assistant Professor  \\
+		Computer Science\\
+		B. Thomas Golisano College of Computing and Information Sciences \\
+		Rochester Institute of Technology
+	\end{innerlist}
+
+	\halfblankline
+
+	\textbf{Jeong~Hyun~Yi} \hfill{E-mail: jhyi@ssu.ac.kr}
+	\begin{innerlist}
+		\item[] 
+		Professor \\
+		Director of the Cyber Security Research Center (CSEC) \\
+		School of Software \\
+		Soongsil University
+	\end{innerlist}
+	
+\end{rSection}
+
+%%End Document
+\end{document}
