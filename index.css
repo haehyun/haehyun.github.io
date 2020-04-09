@@ -8,6 +8,10 @@ ul.circle{
 p.address{
   margin-left: 20px;
 }
+#header{
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 20pt;
+}
 #content{
   font-family: Verdana, Geneva, sans-serif;
   /*font-family: "Lucida Console", Monaco, monospace*/
@@ -157,7 +161,7 @@ p.address{
 }
 
 .card h1 + .close, .modal .overlay ~ * h1 + .close {
-    margin: .2em
+    margin: .1em
 }
 
 .card h2 + .close, .modal .overlay ~ * h2 + .close {
