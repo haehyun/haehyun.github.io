@@ -88,8 +88,10 @@ body {
   counter-reset: theorem;
   counter-reset: definition;
 
-  color: hsl(0, 5%, 10%);
-  background-color: hsl(210, 20%, 98%);
+  /*color: hsl(0, 5%, 10%);*/
+  color: #C4C4C5;
+  background-color: #3C3C3F;
+  /*background-color: hsl(210, 20%, 98%);*/
 
   text-rendering: optimizeLegibility;
 }
@@ -111,7 +113,7 @@ a:not([class]) {
 /* Make links red */
 a,
 a:visited {
-  color: #a00;
+  color: #78C5F5;
 }
 
 /* Make images easier to work with */
@@ -151,7 +153,9 @@ pre {
   max-width: 100%;
   overflow: auto;
   border-radius: 4px;
-  background: hsl(210, 28%, 93%);
+  /*background: hsl(210, 28%, 93%);*/
+  color: #3C3C3F;
+  background-color: #C4C4C5;
 }
 pre code {
   font-size: 95%;
