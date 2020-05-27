@@ -1,282 +1,173 @@
-<html>
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108789484-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<!DOCTYPE html>
+<html lang="en">
 
-      gtag('config', 'UA-108789484-1');
-    </script>
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <title>Home - Haehyun Cho</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108789484-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <body>
-    <div id = "container"> 
+  gtag('config', 'UA-108789484-1');
+  </script>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>Home - Haehyun Cho</title>
 
-      <div id = "content"> 
-        <p style="margin-left:40px">
-          <font size="7"><b>Haehyun Cho</b></font> 
-          <br/> 
-          <font size="4"> Ph.D. Student in Computer Science, concentrating on Information Assurance, at Arizona State University</font>
-        </p> 
+  <meta name="description"
+    content="Ph.D. Student in Computer Science, concentrating on Information Assurance. My primary research interests lie in the field of systems security to discover and mitigate security concerns I am, also, passionate about a wide range of topics to find and resolve security issues.">
+  <meta name="keywords" content="haehyun, haehyun cho, cyber security, systems security">
+  <meta property="og:title" content="Haehyun Cho">
+  <meta property="og:url" content="https://haehyun.github.io">
+  <meta property="og:description"
+    content="Ph.D. Student in Computer Science, concentrating on Information Assurance. My primary research interests lie in the field of systems security to discover and mitigate security concerns I am, also, passionate about a wide range of topics to find and resolve security issues.">
+  <meta property="og:type" content="website">
 
-        <hr>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-        <div id = "menu" style = "menu"> 
-          <img id = "me" alt="photo" align="left" src = "./images/me.jpg" height ="240"> 
-        </div> 
+<body id="top">
+  <header>
+    <h1>Haehyun Cho</h1>
+    <p class="author">
+      <a href="mailto:haehyun@asu.edu">haehyun@asu.edu</a><br>
+      <a href="./cv/haehyun_cv.pdf">CV</a><br>
+      May 2020
+    </p>
+  </header>
 
-        <p style="margin-left:40px">
-          Currently affiliated with <a href="http://sefcom.asu.edu/" target="_blank">SEFCOM</a>
-          led by 
-          <a href="http://www.public.asu.edu/~gahn1/" target="_blank">Dr. Gail-Joon Ahn</a>, <a href="http://www.adamdoupe.com/" target="_blank">Dr. Adam Doup&eacute</a>, <a href="http://www.yancomm.net/" target="_blank">Dr. Yan Shoshitaishvili</a>, <a href="https://ruoyuwang.me/" target="_blank">Dr. Ruoyu (Fish) Wang</a>, and <a href="https://www.tiffanybao.com" target="_blank">Dr. Tiffany Bao</a>.
-        </p>
-
-        <p style="margin-left:40px">
-          My primary research interests lie in the field of systems security to address and discover security concerns.
-          I am, also, eager to resolve security issues in a wide range of topics.
-        </p>
-
-        <hr>
-
-        <p style="margin-left:40px">
-          <!--<i class="material-icons">mail_outline</i>-->
-          <i class="material-icons">&#xe0e1;</i>
-          Email: <a href="mailto:haehyun@asu.edu">haehyun@asu.edu</a>
-        </p>
-        <p style="margin-left:40px">
-          <!--<i class="material-icons" style="font-size:36px">assignment_ind</i>-->
-          <i class="material-icons">&#xe85e;</i>
-          Curriculum Vitae: [<a href="./cv/haehyun_cv.pdf">PDF</a>]
-          <small>(updated at May 2020)</small>
-        </p>
-
-        <div class="flex">
-          <article class="card">
-            <header>
-              <h3>Recent Publications</h3>
-            </header>
-            <ol>
-              <li>
-                SmokeBomb: Effective Mitigation Against Cache Side-channel Attacks on the ARM Architecture.
-                <small>(<a href="./papers/smokebomb-mobisys20.pdf">PDF</a>)
-                (<a href="https://github.com/haehyun/smokebomb">code</a>)</small><br> 
-                <b>Haehyun Cho</b>, Jinbum Park, Donguk Kim, Ziming Zhao, Yan Shoshitaishvili, Adam Doup&eacute, and Gail-Joon Ahn.<br>
-                Proceedings of the 18th ACM International Conference on Mobile Systems, Applications, and Services (MobiSys), Toronto, Canada, Jun 2020.
-              </li>
-              <hr>
-
-              <li>
-                iCORE: Continuous and Proactive Extrospection on Multi-core IoT Devices.
-                <small>(<a href="./papers/icore-sac19.pdf">PDF</a>)</small><br> 
-                Penghui Zhang, <b>Haehyun Cho</b>, Ziming Zhao, Adam Doup&eacute, and Gail-Joon Ahn.<br>
-                Proceedings of the 34th ACM/SIGAPP Symposium On Applied Computing (SAC), Limassol, Cyprus, Apr 2019.
-              </li>
-              <hr>
-
-              <li>
-                Prime+Count: Novel Cross-world Covert Channels on ARM TrustZone.
-                <small>(<a href="./papers/prime+count-acsac18.pdf">PDF</a>)
-                (<a href="https://github.com/haehyun/prime-count">code</a>)</small><br>
-                <b>Haehyun Cho</b>, Penghui Zhang, Donguk Kim, Jinbum Park, Choong-Hoon Lee, Ziming Zhao, Adam Doup&eacute, and Gail-Joon Ahn.<br>
-                Proceedings of the 34th Annual Computer Security Applications Conference (ACSAC), San Juan, Puerto Rico, USA, Dec 2018.
-              </li>
-              <hr>
-
-              <li>
-                Wi Not Calling: Practical Privacy and Availability Attacks in Wi-Fi Calling.
-                <small>(<a href="./papers/WiNotCalling-acsac18.pdf">PDF</a>)
-                (<a href="https://github.com/haehyun/Wi-Fi-Calling-scource-code">code</a>)</small><br>
-                Jaejong Baek, Sukwha Kyung, <b>Haehyun Cho</b>, Ziming Zhao, Yan Shoshitaishvili, Adam Doup&eacute, and Gail-Joon Ahn.<br>
-                Proceedings of the 34th Annual Computer Security Applications Conference (ACSAC), San Juan, Puerto Rico, USA, Dec 2018.
-              </li>
-              <hr>
-
-              <li>
-                DexMonitor: Dynamically Analyzing and Monitoring Obfuscated Android Applications.
-                <small>(<a href="./papers/dexMon-access18.pdf">PDF</a>)
-                (<a href="https://github.com/haehyun/dexMon">code</a>)</small><br>
-                <b>Haehyun Cho</b>, Jeong Hyun Yi, and Gail-Joon Ahn.<br>
-                IEEE Access, Vol.6, pp.71229-71240, Nov 2018.
-              </li>
-              <hr>
-
-              <!--<li>
-                Trustzone explained: Architectural features and use cases.
-                <small>(<a href="./papers/trustzone-16-cic.pdf">PDF</a>)</small><br>
-                Bernard Ngabonziza, Daniel Martin, Anna Bailey, <b>Haehyun Cho</b>, and Sarah Martin.<br>
-                Proceedings of the IEEE 2nd International Conference on Collaboration and Internet Computing (CIC), Pittsburgh, PA, Nov 2016. 
-              </li>
-              <hr>
-
-              <li>
-                Mobile application tamper detection scheme using dynamic code injection against repackaging attacks.
-                <small>(<a href="./papers/mobile-16-josc.pdf">PDF</a>)</small><br>
-                <b>Haehyun Cho</b>, Jiwoong Bang, Myeongju Ji, and Jeong Hyun Yi.<br>
-                The Journal of Supercomputing, Vol.72, No.9, pp.3629-3645, Sep 2016. 
-              </li>
-              <hr>
-
-              <li>
-                TRIPLEMON: A Multi-layer Security Framework for Mediating Inter-Process Communication on Android.
-                <small>(<a href="./papers/triplemon-16-jcs.pdf">PDF</a>)</small><br>
-                Yiming Jing, Gail-Joon Ahn, Hongxin Hu, <b>Haehyun Cho</b>, and Ziming Zhao.<br>
-                Journal of Computer Security, Vol.24, No.4, pp.405-426, Sep 2016. 
-              </li>
-              <hr>
-
-              <li>
-                Empirical Analysis of Anti-Reversing Schemes for Protecting Mobile Codes in the Internet-of-Things <br>
-                <b>Haehyun Cho</b>, Hyunki Kim, Jongsu Lim, Jungwhan Lee, and Jeong Hyun Yi <br>
-                International Journal of Services Technology and Management. Jan. 2016. (to appear)
-                <small>(<a href="#">PDF</a> <a href="#">(BIB))</a></small>
-              </li>
-              <p></p>
-
-              <li>
-                Anti-debugging scheme for protecting mobile apps on android platform.
-                <small>(<a href="./papers/anti-16-josc.pdf">PDF</a>)</small><br>
-                <b>Haehyun Cho</b>, Jiwoong Bang, Myeongju Ji, and Jeong Hyun Yi.<br>
-                The Journal of Supercomputing, Vol.72, No.1, pp.232-246, Jan 2016.
-              </li>
-              <hr>-->
-
-              <!--<li>
-                Personal Information Leaks with Automatic Login in Mobile Social Network Services.
-                <small>(<a href="./papers/personal-15-entropy.pdf">PDF</a>)</small><br>
-                Jongwon Choi, <b>Haehyun Cho</b>, and Jeong Hyun Yi.<br>
-                Entropy Journal, Vol.17, No.6, pp.3947-3962, Jun 2015.
-              </li>-->
-            </ol>
-          </article>
-        </div>
-
-        <div class="flex">
-          <article class="card">
-            <header>
-              <h3>Patents</h3>
-            </header>
-            <ol>
-              <li>
-                Application Code Analysis Apparatus and Method for Code Analysis Using the Same.<br>
-                Jeong Hyun Yi, <b>Haehyun Cho</b>, Jiwoong Bang, and Myeongju Ji.<br>
-                KR Patent, Patent No.: 10-1557455, Sep 2015.
-              </li>
-              <hr>
-
-              <li>
-                User Terminal to Detect the Tampering of the Applications Using Core Code and Method for Tamper Detection Using The Same.<br>
-                Jeong Hyun Yi and <b>Haehyun Cho</b>.<br>
-                KR Patent, Patent No.: 10-1518689, Apr 2015.
-              </li>
-            </ol>
-          </article>
-        </div>
-
-        <div class="flex">
-          <article class="card">
-            <header>
-              <h3>Experience Summary</h3>
-            </header>
-            <ul>
-              <li>
-                Graduate Research Associate
-                at <a href="http://sefcom.asu.edu/" target="_blank">Security Engineering for Future Computing (SEFCOM)</a> <br>
-                - Mar 2016 ~ Present
-              </li>
-              <hr>
-
-              <li>
-                  PhD Intern
-                  at Qualcomm Product Security Initiative (QPSI), Qualcomm Technologies, San Diego, CA <br>
-                  - Mar 2019 ~ Aug 2019
-              </li>
-              <hr>
-
-              <li>
-                Research Associate
-                at <a href="http://csec.ssu.ac.kr/" target="_blank">Cyber Security Research Center (CSEC)</a> <br>
-                - Mar 2015 ~ Feb 2016 
-              </li>
-              <hr>
-              
-              <li>
-                Graduate Research Associate
-                at <a href="http://csec.ssu.ac.kr/" target="_blank">Cyber Security Research Center (CSEC)</a> <br>
-                - Mar 2013 ~ Feb 2015
-              </li>
-              
-              <!-- <ul>
-                <li>
-                  ASU - Samsung Research Membership Projects
-                </li>
-                  - Source : Samsung Research <br>
-                  - Duration : 01/2017 - Present
-                <p></p>
-                <li>
-                  Development of Security Technology for Mobile System Software
-
-                </li>
-                  - Source : National Research Foundation of Korea <br>
-                  - Duration : 08/2014 - 02/2017
-                <p></p>
-
-                <li>
-                  Vulnerability Analyses and Countermeasures of Mobile Obfuscation
-                </li>
-                  - Source : Samsung Electronics <br>
-                  - Duration : 11/2013 - 09/2014
-                <p></p>
-
-                <li>
-                  Credential Management for Smart Device Apps
-                </li>
-                  - Source : Supreme Prosecutors' Office of Korea <br>
-                  - Duration : 08/2013 - 01/2014
-                <p></p>
-              </ul> -->
-
-            </ul>
-          </article>
-        </div>
-
-        <div class="flex">
-          <article class="card">
-            <header>
-              <h3>Education</h3>
-            </header>
-            <ul>
-              <li>
-                PhD, Computer Science, Arizona State University, Tempe, AZ, 08/2016 - present
-              </li>
-                <!-- - Advisor : Dr. Gail-Joon Ahn -->
-                - Awarded the Cybersecurity Fellowship, 08/2019.
-              <hr>
-              <!-- <hr> -->
-              <li>
-                MS, Computer Science and Engineering, Soongsil University, Seoul, Republic of Korea, 03/2013 - 02/2015
-              </li>
-                - Thesis : Mobile App Tamper Detection Scheme Based on Core Code Attestation<br>
-                <!-- - Advisor : Dr. Jeong Hyun Yi -->
-              <hr>
-
-              <li>
-                BS, Computer Science and Engineering, Soongsil University, Seoul, Republic of Korea, 03/2006 - 02/2013
-              </li>
-            </ul>
-          </article>
-        </div>
-
-      </div>
+  <article>
+    <header><h3>About</h3></header>
+    <div>
+      <p>Ph.D. Student in Computer Science, concentrating on Information Assurance, at Arizona State University. Currently, I am affiliated with <a href="http://sefcom.asu.edu/" target="_blank">SEFCOM</a> led by <a href="http://www.adamdoupe.com/" target="_blank">Prof. Adam Doup&eacute</a>, <a href="http://www.yancomm.net/" target="_blank">Prof. Yan Shoshitaishvili</a>, <a href="https://ruoyuwang.me/" target="_blank">Prof. Ruoyu (Fish) Wang</a>, <a href="https://www.tiffanybao.com" target="_blank">Prof. Tiffany Bao</a>, and <a href="http://www.public.asu.edu/~gahn1/" target="_blank">Prof. Gail-Joon Ahn</a>.
+      <br>
+      <br>
+      My primary research interests lie in the field of systems security to discover and mitigate security concerns
+      <small>[<a href="#smokebomb">1</a>,
+        <a href="#icore">2</a>,
+        <a href="#primecount">3</a>]</small>.
+      I am, also, passionate about a wide range of topics to find and resolve security issues
+      <small>[<a href="#winotcalling">4</a>]</small>.
+      </p>
     </div>
+  </article>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <main>
+    <article>
+      <header><h3>News</h3></header>
+      <div>
+<!-- * Jul 2020: IEEE S&amp;P accepted our paper "CrawlPhish: Large-scale Analysis of Client-side Cloaking Techniques in Phishing." -->
+<pre>* May 2020: Awarded the Engineering Graduate Fellowship by Ira A. Fulton Schools of Engineering, Arizona State University.
+* Mar 2020: ACM MobiSys accepted our paper "SmokeBomb: Effective Mitigation Against Cache Side-channel Attacks on the ARM Architecture."
+* Mar 2020: Awarded the CIDSE Doctoral Fellowship by the School of Computing, Informatics, and Decisions Systems Engineering (CIDSE), Arizona State University.</pre>
+      </div>
+    </article>
 
-  </body>
+    <article>
+      <header>
+        <h3 id="Recent-publication">Recent Publications</h3>
+      </header>
+      <div>
+        <ol>
+<!--           <li id="crawlphish">
+            CrawlPhish: Large-scale Analysis of Client-side Cloaking Techniques in Phishing.
+            <small>(to appear)</small><br> 
+            Penghui Zhang, Adam Oest, <ins><b>Haehyun Cho</b></ins>, Zhibo Sun, RC Johnson, Brad Wardman, Shaown Sarker, Alexandros Kapravelos, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doup&eacute, and Gail-Joon Ahn.<br>
+            The 42nd IEEE Symposium on Security and Privacy (Oakland), San Francisco, CA, May 2021.
+          </li>
+
+          <li id="vik">
+            ViK: Practical Mitigation of Use-after-free Exploits through Object ID Inspection.
+            <small>(to appear)</small><br>
+            <ins><b>Haehyun Cho</b></ins>, Jinbum Park, Adam Oest, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doup&eacute, and Gail-Joon Ahn.<br>
+            The 2021 The Network and Distributed System Security Symposium (NDSS), San Diego, CA, Feb 2021.
+          </li>
+
+          <li id="leakptrs">
+            Exploiting Uninitialized Stack Memory Uses in the Linux Kernel for Leaking Kernel Pointers.
+            <small>(to appear)</small><br>
+            <ins><b>Haehyun Cho</b></ins>, Jinbum Park, Joonwon Kang, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doup&eacute, and Gail-Joon Ahn.<br>
+            The 14th USENIX Workshop on Offensive Technologies (WOOT), Boston, MA, Aug 2020.
+          </li> -->
+
+          <li id="smokebomb">
+            SmokeBomb: Effective Mitigation Against Cache Side-channel Attacks on the ARM Architecture.
+            <small>(<a href="./papers/smokebomb-mobisys20.pdf">pdf</a>, <a href="https://github.com/haehyun/smokebomb">code</a>)</small><br> 
+            <ins><b>Haehyun Cho</b></ins>, Jinbum Park, Donguk Kim, Ziming Zhao, Yan Shoshitaishvili, Adam Doup&eacute, and Gail-Joon Ahn.<br>
+            The 18th ACM International Conference on Mobile Systems, Applications, and Services (MobiSys), Toronto, Canada, Jun 2020.
+          </li>
+
+          <li id="icore">
+            iCORE: Continuous and Proactive Extrospection on Multi-core IoT Devices.
+            <small>(<a href="./papers/icore-sac19.pdf">pdf</a>)</small><br> 
+            Penghui Zhang, <ins><b>Haehyun Cho</b></ins>, Ziming Zhao, Adam Doup&eacute, and Gail-Joon Ahn.<br>
+            The 34th ACM/SIGAPP Symposium On Applied Computing (SAC), Limassol, Cyprus, Apr 2019.
+          </li>
+
+          <li id="primecount">
+            Prime+Count: Novel Cross-world Covert Channels on ARM TrustZone.
+            <small>(<a href="./papers/prime+count-acsac18.pdf">pdf</a>, <a href="https://github.com/haehyun/prime-count">code</a>)</small><br>
+            <ins><b>Haehyun Cho</b></ins>, Penghui Zhang, Donguk Kim, Jinbum Park, Choong-Hoon Lee, Ziming Zhao, Adam Doup&eacute, and Gail-Joon Ahn.<br>
+            The 34th Annual Computer Security Applications Conference (ACSAC), San Juan, Puerto Rico, USA, Dec 2018.
+          </li>
+
+          <li id="winotcalling">
+            Wi Not Calling: Practical Privacy and Availability Attacks in Wi-Fi Calling.
+            <small>(<a href="./papers/WiNotCalling-acsac18.pdf">pdf</a>, <a href="https://github.com/haehyun/Wi-Fi-Calling-scource-code">code</a>)</small><br>
+            Jaejong Baek, Sukwha Kyung, <ins><b>Haehyun Cho</b></ins>, Ziming Zhao, Yan Shoshitaishvili, Adam Doup&eacute, and Gail-Joon Ahn.<br>
+            The 34th Annual Computer Security Applications Conference (ACSAC), San Juan, Puerto Rico, USA, Dec 2018.
+          </li>
+
+          <!-- <li>
+            DexMonitor: Dynamically Analyzing and Monitoring Obfuscated Android Applications.
+            <small>(<a href="./papers/dexMon-access18.pdf">pdf</a>)
+            (<a href="https://github.com/haehyun/dexMon">code</a>)</small><br>
+            <ins><b>Haehyun Cho</b></ins>, Jeong Hyun Yi, and Gail-Joon Ahn.<br>
+            IEEE Access, Vol.6, pp.71229-71240, Nov 2018.
+          </li> -->
+        </ol>
+      </div>
+      <footer>
+        <p><a href="#top">[Top]</a></p>
+      </footer>
+    </article>
+
+    <!-- <article>
+      <p>
+        <b>bold</b>
+        <strong>strong</strong>
+        <em>emphasized</em>
+        <i>italic</i> 
+        <small>Small</small>
+        <sub>subscripted</sub>
+        <sup>superscripted</sup>
+        <ins>inserted</ins>
+        <del>deleted</del>
+        <mark>highlighted</mark>
+        <a href="#!">hyperlink</a>
+        <kbd>Cmd</kbd> + <kbd>Shift</kbd>
+      </p>
+
+      <blockquote>
+        Give me six hours to chop down a tree and I will spend the first four sharpening the axe.
+        <cite>— Abraham Lincoln</cite>
+      </blockquote>
+
+      <div class="footnotes">
+        <p id="fn1">1. From <a
+            href="https://www.math.brown.edu/~res/MFS/handout8.pdf">https://www.math.brown.edu/~res/MFS/handout8.pdf</a>.
+          <a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></p>
+        <p id="fn2">2. “Definition.” Merriam-Webster.com Dictionary, Merriam-Webster,
+          <a
+            href="https://www.merriam-webster.com/dictionary/definition">https://www.merriam-webster.com/dictionary/definition</a>.
+          Accessed 18 May. 2020. <a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></p>
+      </div>
+    </article> -->
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</body>
+
 </html>
-
-
