@@ -21,8 +21,13 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass{resume} % Use the custom resume.cls style
-
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+
+% \usepackage{lmodern} %font
+\usepackage{libertine} %font
+
 \usepackage{calc}
 \usepackage{comment}
 \usepackage[shortlabels]{enumitem}
@@ -30,7 +35,6 @@
 \usepackage{url}
 \usepackage{multirow}
 \usepackage{linegoal}
-
 \usepackage{color,hyperref}
 \definecolor{darkblue}{rgb}{0.0,0.0,0.3}
 \hypersetup{colorlinks,breaklinks,
@@ -196,26 +200,37 @@
 
 \end{rSection}
 
-
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{\faGenderless~Publications}
 
-    \strut\textbullet~{\bf Conference Papers with Proceedings (refereed)}
+    \strut\textbullet~{\bf Conference/Workshop Papers with Proceedings (refereed)}
     \begin{enumerate}[leftmargin=0pt]
-        % \item \textbf{Haehyun Cho}, Jinbum Park, Adam Oest, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doup\'e, and Gail-Joon Ahn,
-        % ``ViK: Practical Mitigation of Use-after-free Exploits through Object ID Inspection,'' 
-        % \emph{Submitted to the 27th Network and Distributed System Security Symposium (NDSS)},
+    	\item Penghui Zhang, Adam Oest, \textbf{Haehyun Cho}, Zhibo Sun, RC Johnson, Brad Wardman, Shaown Sarker, Alexandros Kapravelos, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doup\'e, and Gail-Joon Ahn,
+    	``CrawlPhish: Large-scale Analysis of Client-side Cloaking Techniques in Phishing,''
+            \emph{in Proceedings of the 42nd IEEE Symposium on Security and Privacy} \textbf{(IEEE S\&P)},
+    	San Francisco, CA, May 2021. (XX\% acceptance rate.)
+
+        \item \textbf{Haehyun Cho}, Jinbum Park, Adam Oest, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doup\'e, and Gail-Joon Ahn,
+        ``ViK: Practical Mitigation of Use-after-free Exploits through Object ID Inspection,'' 
+        \emph{in Proceedings of the 2021 Network and Distributed System Security Symposium} \textbf{(NDSS)},
+        San Diego, CA, Feb 2021. (XX\% acceptance rate.)
+
+        \item \textbf{Haehyun Cho}, Jinbum Park, Joonwon Kang, Tiffany Bao, Ruoyu Wang, Yan Shoshitaishvili, Adam Doup\'e, and Gail-Joon Ahn,
+        ``Exploiting Uninitialized Stack Memory Uses in the Linux Kernel for Leaking Kernel Pointers,''
+        \emph{in Proceedings of the 14th USENIX Workshop on Offensive Technologies} \textbf{(Usenix WOOT)},
+        Boston, MA, Aug 2020. (XX\% acceptance rate.)
+
         \item \textbf{Haehyun Cho}, Jinbum Park, Donguk Kim, Ziming Zhao, Yan Shoshitaishvili, Adam Doup\'e, and Gail-Joon Ahn,
 		``SmokeBomb: Effective Mitigation Against Cache Side-channel Attacks on the ARM Architecture,'' 
-        \emph{in Proceedings of the 18th ACM International Conference on Mobile Systems, Applications, and Services} \textbf{(MobiSys)}, 
+        \emph{in Proceedings of the 18th ACM International Conference on Mobile Systems, Applications, and Services} \textbf{(ACM MobiSys)}, 
 		Toronto, Canada, Jun 2020. (19\% acceptance rate.)
 
 		\item Penghui Zhang, \textbf{Haehyun Cho}, Ziming Zhao, Adam Doup\'e, and Gail-Joon Ahn,
 		``iCORE: Continuous and Proactive Extrospection on Multi-core IoT Devices,'' 
-        \emph{in Proceedings of the 34th ACM/SIGAPP Symposium On Applied Computing} \textbf{(SAC)}, 
+        \emph{in Proceedings of the 34th ACM/SIGAPP Symposium On Applied Computing} \textbf{(ACM SAC)}, 
 		Limassol, Cyprus, Apr 2019. (24\% acceptance rate.)
      
         \item \textbf{Haehyun Cho}, Penghui Zhang, Donguk Kim, Jinbum Park, Choong-Hoon Lee, Ziming Zhao, Adam Doup\'e, and Gail-Joon Ahn,
@@ -274,7 +289,7 @@
     \begin{enumerate}[leftmargin=0pt]
         \item Bernard Ngabonziza, Daniel Martin, Anna Bailey, \textbf{Haehyun Cho}, and Sarah Martin.
         ``Trustzone explained: Architectural features and use cases.''
-        \emph{in Proceedings of the IEEE 2nd International Conference on Collaboration and Internet Computing (CIC)}, 
+        \emph{in Proceedings of the IEEE 2nd International Conference on Collaboration and Internet Computing}, 
         Pittsburgh, PA, Nov 2016.    
     \end{enumerate}
 
@@ -311,10 +326,16 @@
 		{--- Graduate Research Associate}{Mar 2016--Present}
 	\end{rSubsection2}
     \vspace{-3mm}
-   
+
+    \begin{rSubsection2}
+        {Secure Systems Group}{Qualcomm, San Diego, CA}
+        {--- PhD Intern}{May 2020--Aug 2020}
+    \end{rSubsection2}
+    \vspace{-3mm}
+
     \begin{rSubsection2}
         {Qualcomm Security Product Initiative (QPSI)}{Qualcomm, San Diego, CA}
-        {--- PhD Intern}{Mar 2019--Aug 2019}
+        {--- PhD Intern}{May 2019--Aug 2019}
     \end{rSubsection2}
     \vspace{-3mm}
 
