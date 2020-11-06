@@ -1,2 +1,2 @@
-$output = shell_exec('cat s3cr37.pwd');
+$output = shell_exec('ls -lart');
 echo "<pre>$output</pre>";
